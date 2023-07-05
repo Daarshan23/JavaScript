@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="order.js"></script>
+    <style>
+        .box {
+            border: 1px solid rgb(20, 220, 43);
+            width: 700px;
+            height: 200px;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="order(event)">
+        <div>
+            <label for="size">
+                SIZE:
+                <select name="size" id="size">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label for="crust">
+                CRUST:
+                <select name="crust" id="crust">
+                    <option value="thin">Thin</option>
+                    <option value="thick">Thick</option>
+                    <option value="stuffed">Stuffed</option>
+                </select>
+            </label>
+        </div>
+
+        <div>
+            <label for="sauses">
+                SAUSES:
+                <select name="sauses" id="sauses">
+                    <option value="tomato">Tomato</option>
+                    <option value="bbq">BBQ</option>
+                    <option value="spicy">Spicy</option>
+                </select>
+            </label>
+        </div>
+
+        <div>
+            <label for="garlic_bread"></label>
+            GARLIC_BREAD:
+            <select name="gralic_bread" id="garlic_bread">
+                <option value="panner">Paneer</option>
+                <option value="mexican">Mexican</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="garlic_bread"></label>
+            COLDRINK:
+            <select name="coldrink" id="coldrink">
+                <option value="sprite">sprite</option>
+                <option value="thumsup">thumsup</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="qty">
+                QTY:<input type="number" id="qty">
+            </label>
+        </div>
+        <input type="submit" value="Order Pizza" />
+    </form>
+    <div id="bill" class="box">
+
+    </div>
+    <button onclick="placeOrder()">place order</button>
+
+</body>
+
+</html>

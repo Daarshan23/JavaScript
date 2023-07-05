@@ -1,0 +1,17 @@
+// one liner
+await new Promise(resolve => setTimeout(resolve, 5000));
+
+// or re-usable `sleep` function:
+async function init() {
+  console.log(1);
+  await sleep(1000);
+  console.log(2);
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+even
